@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: "trade-app-copy"
+    platform: linux/arm64
+    build: ./docker/app
+    volumes:
+      - ./src:/src
+    tty: true
+    ports:
+      - "9999:9999"
